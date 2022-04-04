@@ -41,7 +41,7 @@ Seu desafio é criar o backend para um sistema de gerenciamento de uma bibliotec
 # Techs: 
 - Java SE 11
 
-## O desafio foi realizado usando as seguintes tecnologias:
+O desafio foi realizado usando as seguintes tecnologias:
    1 - JavaSE-11
    2 - Spring Framework 2.6.6
    3 - H2-database
