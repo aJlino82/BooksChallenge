@@ -3,6 +3,7 @@
     <img src="https://i.pinimg.com/originals/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57.png" alt="Logo" width="200">
 
   <h3 align="center">Biblioteca by <a href="https://github.com/Lorenalgm">Lorena</a></h3>
+  <h3 align="center">modified by <a href="https://github.com/aJlino82">Adailton Júnior</a></h3>
  <br />
   <p align="center">
      Sistema de gerenciamento de biblioteca
