@@ -3,7 +3,7 @@
     <img src="https://i.pinimg.com/originals/dd/64/da/dd64da585bc57cb05e5fd4d8ce873f57.png" alt="Logo" width="200">
 
   <h3 align="center">Biblioteca by <a href="https://github.com/Lorenalgm">Lorena</a></h3>
-  <h3 align="center">modified by <a href="https://github.com/aJlino82">Adailton Júnior</a></h3>
+  <h3 align="center">Modified by <a href="https://github.com/aJlino82">Adailton Júnior</a></h3>
  <br />
   <p align="center">
      Sistema de gerenciamento de biblioteca
@@ -49,10 +49,7 @@ O desafio foi realizado usando as seguintes tecnologias:
    Escrevi o projeto usando três camadas, as rotas estão seguindo exatamente os requisitos do desafio.
 
 
-# Compartilhe!
-Faça um print, gif ou vídeo e compartilhe o resultado com a #devchallenge ou marcando nosso perfil @devchallenge!<br>
 
-Desafio criado por  <a href="https://www.linkedin.com/in/lorenagmontes/">Lorena</a> :)
 
 
 # Comunidade DevChallenge
