@@ -41,6 +41,4 @@ public class BookController {
     public ResponseEntity<List<Books>> getAllBooks() {
         return ResponseEntity.ok(bookService.getAllBooks());
     }
-
-
 }
