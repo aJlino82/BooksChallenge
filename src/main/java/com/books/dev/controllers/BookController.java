@@ -41,4 +41,9 @@ public class BookController {
     public ResponseEntity<List<Books>> getAllBooks() {
         return ResponseEntity.ok(bookService.getAllBooks());
     }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Books> updatePatchBook(@PathVariable Long id, @RequestBody Books book) {
+        return ResponseEntity.ok(bookService.updateBook(id, book));
+    }
 }
