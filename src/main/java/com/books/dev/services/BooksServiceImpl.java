@@ -1,33 +1,37 @@
 package com.books.dev.services;
 
-import com.books.dev.entities.Books;
+import com.books.dev.entities.Book;
 import com.books.dev.repositories.BooksRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BooksServiceImpl implements BooksServiceInterface {
+public class BooksServiceImpl implements BooksServiceInterface<Book, Long> {
 
-    @Autowired
-    BooksRepository booksRepository;
 
-    @Override
-    public Books getBookById(Long id) {
-        return booksRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Book not found with id " + id));
+    private final BooksRepository booksRepository;
+
+    public BooksServiceImpl(BooksRepository booksRepository) {
+        this.booksRepository = booksRepository;
     }
 
     @Override
-    public Books createBook(Books book) {
+    public Book getById(Long id) {
+        return booksRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Book not found with id " + id));
+    }
+
+    @Override
+    public Book create(Book book) {
         return booksRepository.save(book);
     }
 
     @Override
-    public Books updateBook(Long id, Books book) {
-        Books existingBook = booksRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Book not found with id " + id));
+    public Book update(Long id, Book book) {
+        Book existingBook = booksRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Book not found with id " + id));
 
         existingBook.setTitle(book.getTitle());
         existingBook.setAuthor(book.getAuthor());
@@ -38,13 +42,13 @@ public class BooksServiceImpl implements BooksServiceInterface {
     }
 
     @Override
-    public void deleteBook(Long id) {
-        Books book = booksRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Book not found with id " + id));
+    public void delete(Long id) {
+        Book book = booksRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Book not found with id " + id));
         booksRepository.delete(book);
     }
 
-    public List<Books> getAllBooks() {
+    public List<Book> getAllBooks() {
         return booksRepository.findAll();
     }
 }

@@ -1,13 +1,13 @@
 package com.books.dev.services;
 
-import com.books.dev.entities.Books;
+import com.books.dev.entities.Book;
 
-public interface BooksServiceInterface {
-    Books getBookById(Long id);
+public interface BooksServiceInterface<T, ID> {
+    Book getById(ID id);
 
-    Books createBook(Books book);
+    Book create(T entity);
 
-    Books updateBook(Long id, Books book);
+    Book update(ID id, T entity);
 
-    void deleteBook(Long id);
+    void delete(ID id);
 }

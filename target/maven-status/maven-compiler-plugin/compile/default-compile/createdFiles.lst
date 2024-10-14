@@ -1,0 +1,10 @@
+com\books\dev\entities\Book.class
+com\books\dev\entities\Customer.class
+com\books\dev\controllers\AbstractControllerInterface.class
+com\books\dev\services\BooksServiceImpl.class
+com\books\dev\controllers\BookControllerImpl.class
+com\books\dev\entities\Rental.class
+com\books\dev\mocks\MockBook.class
+com\books\dev\BooksChallengeApplication.class
+com\books\dev\services\BooksServiceInterface.class
+com\books\dev\repositories\BooksRepository.class

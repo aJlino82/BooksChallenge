@@ -1,13 +1,15 @@
 package com.books.dev.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Objects;
 
 @Entity
-public class Books {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,11 +20,11 @@ public class Books {
     private String author;
     private String photo;
 
-    public Books() {
+    public Book() {
 
     }
 
-    public Books(Long id, String title, String publishing, String author, String photo) {
+    public Book(Long id, String title, String publishing, String author, String photo) {
 
         this.id = id;
         this.title = title;
@@ -84,7 +86,7 @@ public class Books {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Books other = (Books) obj;
+        Book other = (Book) obj;
         return Objects.equals(author, other.author) && Objects.equals(id, other.id)
                 && Objects.equals(photo, other.photo) && Objects.equals(publishing, other.publishing)
                 && Objects.equals(title, other.title);
@@ -92,7 +94,7 @@ public class Books {
 
     @Override
     public String toString() {
-        return "Books [id=" + id + ", title=" + title + ", publishing=" + publishing + ", author=" + author + ", photo="
+        return "Book [id=" + id + ", title=" + title + ", publishing=" + publishing + ", author=" + author + ", photo="
                 + photo + "]";
     }
 
